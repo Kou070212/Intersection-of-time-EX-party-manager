@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>パーティ編成管理</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="character-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">✦</span>
+      <div>
+        <h1>時空の交わり(EX)</h1>
+        <p>ステージごとのパーティ管理用ツール</p>
+      </div>
+    </div>
+    <div class="top-actions"><label class="season-picker" for="season-select">◆ シーズン <select id="season-select"
+          aria-label="シーズン切り替え"></select></label><button id="reset-all" class="button button-quiet"
+        type="button">全編成をリセット</button></div>
+  </header>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <h2>ステージ選択</h2>
+      <nav id="stage-list" aria-label="ステージ一覧"></nav>
+      <div class="sidebar-note">各ステージ最大4人<br>同じキャラクターは同一ステージに重複不可</div>
+    </aside>
+
+    <main class="main-content">
+      <section class="stage-banner panel">
+        <div class="banner-copy">
+          <div class="stage-title-line">
+            <h2 id="stage-title">ステージ 01</h2><span id="stage-affinity" class="affinity-inline"></span>
+          </div>
+          <p class="eyebrow">弱点属性</p>
+          <div id="stage-advantages" class="advantage-list"></div>
+        </div>
+        <div class="banner-art" aria-hidden="true"><span>✧</span><span>❄</span><span>✦</span></div>
+      </section>
+
+      <section class="panel party-panel">
+        <div class="section-heading">
+          <h2>現在の編成</h2><span id="party-count" class="count-label">0 / 4 人</span>
+        </div>
+        <div id="party-slots" class="party-slots"></div>
+        <p id="party-hint" class="help-text">下のキャラクター一覧から選択してください。</p>
+      </section>
+
+      <section class="panel roster-panel">
+        <div class="roster-heading">
+          <div>
+            <h2>キャラクター選択</h2>
+            <p class="help-text">通常キャラ：最大2回 / シーズキャラ：最大4回</p>
+          </div>
+          <input id="search" type="search" placeholder="キャラクター名で検索…" aria-label="キャラクター名で検索">
+        </div>
+        <div id="element-filters" class="filters" aria-label="属性フィルター"></div>
+        <div id="roster" class="roster-grid"></div>
+        <p class="footnote">使用回数は全ステージで合算されます。上限に達したキャラクターは暗くなり、選択できません。</p>
+      </section>
+    </main>
+
+    <aside class="details-column">
+      <section class="panel detail-panel">
+        <h2>ステージ情報</h2>
+
+        <div id="detail-stage-name" class="detail-stage-name">
+          ステージ 01
+        </div>
+        <div id="detail-enemy" class="detail-enemy"></div>
+
+        <h3>有利属性</h3>
+        <div id="detail-advantages" class="advantage-list"></div>
+        <div class="detail-divider"></div>
+        <button id="reset-stage" class="button button-secondary full-width" type="button">このステージの編成をリセット</button>
+      </section>
+      <section class="panel usage-panel">
+        <div class="section-heading">
+          <h2>使用状況</h2>
+        </div>
+        <div id="usage-summary"></div>
+      </section>
+    </aside>
+  </div>
+  <footer>編成データはこのブラウザー内に自動保存されます。</footer>
+  <dialog id="confirm-dialog">
+    <form method="dialog">
+      <h2>編成をリセットしますか？</h2>
+      <p id="confirm-message">この操作は取り消せません。</p>
+      <div class="dialog-actions"><button class="button button-secondary" value="cancel">キャンセル</button><button
+          id="confirm-yes" class="button button-danger" value="yes">リセットする</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
