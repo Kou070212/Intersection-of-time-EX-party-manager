@@ -4,7 +4,7 @@
   const LEGACY_STORAGE_KEY = "party-formation-manager-v1";
   const MAX_PARTY_SIZE = 4;
   const NORMAL_LIMIT = 2;
-  const SPECIAL_LIMIT = 4;
+  const SPECIAL_LIMIT = 5;
   let selectedStageId = 1;
   let activeElement = "すべて";
   let searchText = "";
