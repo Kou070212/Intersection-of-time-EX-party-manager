@@ -70,7 +70,7 @@ const characters = [
 // ここも必要に応じて編集してください。
 const stages = [
   { id:1, advantages:["火炎","暗黒"],enemy: "聖騎士マルマス", description:"エリア1" },
-  { id:2, advantages:["物理","風"], enemy: "赤き魔神・灰色の魔神", description:"エリア2" },
+  { id:2, advantages:["物理","氷"], enemy: "赤き魔神・灰色の魔神", description:"エリア2" },
   { id:3, advantages:["物理","火炎"], enemy: "<不気味な牙>", description:"エリア3" },
   { id:4, advantages:["氷","神聖"], enemy: "古竜(エンシェント・ドラゴン)", description:"エリア4" },
   { id:5, advantages:["風","大地"], enemy: "「無欲」のフラウドリン", description:"エリア5" },
