@@ -57,7 +57,7 @@ const characters = [
   { id:"char-019", parentId:"char-019", name:"ディアンヌ", image: "images/character019.png", symbol:"19", elements:["大地","大地","大地"] },
   { id:"char-020", parentId:"char-020", name:"デリエリ", image: "images/character020.png", symbol:"20", elements:["暗黒","火炎","暗黒"] },
   { id:"char-021", parentId:"char-021", name:"バン", image: "images/character021.png", symbol:"21", elements:["物理","大地","暗黒"] },
-  { id:"char-022", parentId:"char-022", name:"エスカノール", image: "images/character022.png", symbol:"22", elements:["火炎","火炎","火炎"] },
+  { id:"char-022", parentId:"char-022", name:"エスカノール", image: "images/character022.png", symbol:"22", elements:["火炎","神聖","火炎"] },
   { id:"char-023", parentId:"char-023", name:"ランスッロット", image: "images/character023.png", symbol:"23", elements:["神聖","物理","大地"] },
   { id:"char-024", parentId:"char-024", name:"マニー", image: "images/character024.png", symbol:"24", elements:["神聖","氷","氷"] },
   { id:"char-025", parentId:"char-025", name:"ドレイク", image: "images/character025.png", symbol:"25]", elements:["雷","雷","雷"] },
