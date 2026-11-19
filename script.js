@@ -22,8 +22,9 @@
   if (!SEASONS.length || new Set(seasonIds).size !== seasonIds.length) {
     throw new Error("SEASONS には重複しない id のシーズンを1つ以上登録してください。");
   }
+  let selectedSeasonId = SEASONS[0].id;
   let state = loadState();
-  let selectedSeasonId = state.selectedSeasonId;
+  selectedSeasonId = state.selectedSeasonId;
   function currentSeason() { return SEASONS.find(season => season.id === selectedSeasonId) || SEASONS[0]; }
   function currentSeasonParties() { return state.seasons[selectedSeasonId]; }
   function normalizeParties(raw) {
